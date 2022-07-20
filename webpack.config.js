@@ -1,4 +1,3 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -20,10 +19,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
-    },
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
     },
     mode: "development",
     plugins: [

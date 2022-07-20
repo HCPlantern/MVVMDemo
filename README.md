@@ -1,6 +1,6 @@
-# 一个 MVVM 框架
+# 简单 MVVM 框架
 
-## 项目要求
+## 项目内容
 
 实现一个简单的 MVVM 框架
 
@@ -9,11 +9,13 @@
 - [x] 实现数据单向绑定
 - [x] 实现双向绑定
 - [x] 使用 Typescript
-- [x] 单测覆盖率 80%
+- [x] 测试覆盖率 80%
+
+支持双花括号的模板语法, 支持使用 v-model 对结点进行双向绑定
 
 ## 使用方法
 
-- 在　`main.ts` 中定义 `MVVM` 入口, 并运行 `npm run start`
+- 编写 `index.html`, 在 `main.ts` 中定义 `MVVM` 入口, 并运行 `npm run start`
 
 - 需要传入 `el` 为绑定的`dom`元素, `data` 为传递的数据
 
@@ -49,7 +51,7 @@ new Vue({
 ...
 ```
 
-该项目集成了 Webpack Server, 运行 `npm run start` 即可开启服务器, 默认地址为 `localhost:8888`
+该项目集成了 Webpack Dev Server, 运行 `npm run start` 即可开启服务器, 默认地址为 `localhost:8888`
 
 ## 实现细节
 
@@ -108,10 +110,10 @@ node3  <-[#595959,plain]-  node2
 
 在 `Compiler` 中还为输入框结点设置了对 input 事件的监听, 当监听到输入事件时立即更新 `vm.$data` 的值, 从而实现双向绑定
 
-### 单元测试
+### 测试
 
 该项目集成了 `Jest` 测试框架, 编写了一个简单的测试文件, 详见 `./test/Vue.test.js`
 
 测试结果如下:
 
-![20220720163357-2022-07-20-16-33-58](https://cdn.hcplantern.cn/img/20220720163357-2022-07-20-16-33-58.png)
+![20220720233705-2022-07-20-23-37-05](https://cdn.hcplantern.cn/img/20220720233705-2022-07-20-23-37-05.png)

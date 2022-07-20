@@ -74,6 +74,5 @@ export default function Compile(element: any, vm: Vue) {
     }
 
     // 操作完成后将文档碎片添加到页面
-    // 此时已经能将vm的数据渲染到页面上 但还未实现数据变动的及时更新
     vm.$el.appendChild(fragment);
 }

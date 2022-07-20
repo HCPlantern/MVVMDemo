@@ -1,38 +1,37 @@
 {
-  "name": "learning-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "/src/main.ts",
-  "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "server": "webpack-dev-server --hot --config webpack.config.js",
-    "test": "jest --coverage --silent",
-    "start": "npm run server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "jest": {
-    "testEnvironment": "jsdom"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@babel/preset-typescript": "^7.18.6",
-    "@types/jest": "^28.1.6",
-    "babel-jest": "^28.1.3",
-    "html-webpack-plugin": "^5.5.0",
-    "jest": "^28.1.3",
-    "jest-environment-jsdom": "^28.1.3",
-    "ts-jest": "^28.0.7",
-    "ts-loader": "^9.3.1",
-    "typescript": "^4.7.4",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
-  },
-  "dependencies": {
-    "autoprefixer": "10.4.5"
-  }
+    "name": "learning-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "/src/main.ts",
+    "scripts": {
+        "server": "webpack-dev-server --hot --config webpack.config.js",
+        "test": "jest --coverage --silent",
+        "start": "npm run server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "testEnvironment": "jsdom"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.9",
+        "@babel/preset-env": "^7.18.9",
+        "@babel/preset-typescript": "^7.18.6",
+        "@types/jest": "^28.1.6",
+        "babel-jest": "^28.1.3",
+        "html-webpack-plugin": "^5.5.0",
+        "jest": "^28.1.3",
+        "jest-environment-jsdom": "^28.1.3",
+        "ts-jest": "^28.0.7",
+        "ts-loader": "^9.3.1",
+        "typescript": "^4.7.4",
+        "uglifyjs-webpack-plugin": "^2.2.0",
+        "webpack": "^5.73.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.9.3"
+    },
+    "dependencies": {
+        "autoprefixer": "10.4.5"
+    }
 }
