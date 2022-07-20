@@ -5,6 +5,10 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: './src/main.ts',
     devtool: 'source-map',
+    devServer: {
+        compress: true,
+        port: 8888,
+    },
     module: {
         rules: [
             {

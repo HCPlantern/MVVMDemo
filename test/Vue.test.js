@@ -1,4 +1,4 @@
-import Vue from "./Vue";
+import Vue from "../src/Vue";
 
 test('Vue', () => {
     document.body.innerHTML = `
