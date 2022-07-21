@@ -76,31 +76,7 @@ Object.defineProperty(data_instance, key, {
 
 ### 发布-订阅模式
 
-```plantuml
-@startuml
-
-!theme plain 
-top to bottom direction
-skinparam linetype polyline
-
-class node0 as "components/Dependency.ts" {
-   Watcher: 
-}
-class node1 as "components/Observer.ts" {
-   Dependency: 
-}
-class node3 as "components/Watcher.ts" {
-   Dependency: 
-   Vue: 
-}
-class node2 as "src/Vue.ts"
-
-node0  <-[#595959,plain]-  node3 
-node1  <-[#595959,plain]-  node0 
-node3  <-[#595959,plain]-  node0 
-node3  <-[#595959,plain]-  node2 
-@enduml
-```
+![20220721185951-2022-07-21-18-59-52](https://cdn.hcplantern.cn/img/20220721185951-2022-07-21-18-59-52.png)
 
 详见 `Dependency` 和 `Watcher` 实现
 
