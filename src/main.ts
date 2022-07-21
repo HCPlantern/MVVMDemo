@@ -1,10 +1,13 @@
 import Vue from "./Vue";
+import "./css/style.css"
+
 new Vue({
-    el: '#app',
+    el: '.container',
     data: {
-        name: 'Lubricants',
+        name: '',
         more: {
-            salary: 10000
+            hobby: '',
+            description: ''
         }
     }
 });

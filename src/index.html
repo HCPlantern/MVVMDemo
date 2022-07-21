@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="//unpkg.com/layui@2.7.5/dist/css/layui.css" rel="stylesheet">
+    <script src="//unpkg.com/layui@2.7.5/dist/layui.js"></script>
+
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>MyMVVM</title>
 </head>
 <body>
-<div id="app">
-    <p>{{name}}</p>
-    <label>
-        <input type="text" v-model="name"/>
-    </label>
-    <p>{{more.salary}}</p>
-    <label>
-        <input type="text" v-model="more.salary"/>
-    </label>
+<div class="container">
+    <div class="form">
+        <form id="form" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" v-model="name" name="name" required lay-verify="required" placeholder="请输入姓名"
+                           autocomplete="off"
+                           class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">爱好</label>
+                <div class="layui-input-inline">
+                    <input v-model="more.hobby" type="text" name="hobby" required lay-verify="required" placeholder="请输入爱好"
+                           autocomplete="off"
+                           class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">简介</label>
+                <div class="layui-input-block">
+                    <textarea v-model="more.description" name="desc" placeholder="请输入内容" class="layui-textarea">
+                    </textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="description">
+
+        <div class="layui-card">
+            <div class="layui-card-header">信息</div>
+            <div class="layui-card-body">
+                <p>姓名: {{ name }}</p>
+                <p>爱好: {{ more.hobby }}</p>
+                <p>简介: {{ more.description }}</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 </body>
 </html>
 
-<style>
-
-</style>

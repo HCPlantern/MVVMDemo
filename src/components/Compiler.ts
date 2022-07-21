@@ -42,7 +42,7 @@ export default function Compile(element: any, vm: Vue) {
             }
         }
         // 替换绑定了v-model属性的input节点的内容
-        if (node.nodeType === 1 && node.nodeName === "INPUT") {
+        if (node.nodeType === 1 && (node.nodeName === "INPUT" || node.nodeName === "TEXTAREA")) {
             const attr = Array.from(node.attributes);
             attr.forEach((item: Node) => {
                 if (item.nodeName === "v-model") {
